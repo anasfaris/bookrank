@@ -111,6 +111,12 @@
     self.three.text = [NSString stringWithFormat:@"3 | %.0f", s3];
     self.two.text = [NSString stringWithFormat:@"2 | %.0f", s2];
     self.one.text = [NSString stringWithFormat:@"1 | %.0f", s1];
+
+    NSString *bookImgPath = [xmlDoc valueForKeyPath:@"book.image_url"];
+    NSURL *url = [[NSURL alloc] initWithString:bookImgPath];
+    NSData *imgData = [NSData dataWithContentsOfURL:url];
+    UIImage *img = [UIImage imageWithData:imgData];
+    [self.bookImg setImage:img];
     
     double bookrankFloat = [self getBookRank:nReaders];
     NSString *bookrankString = [NSString stringWithFormat:@"Bookrank: %.2f", bookrankFloat];

@@ -21,6 +21,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *three;
 @property (strong, nonatomic) IBOutlet UILabel *two;
 @property (strong, nonatomic) IBOutlet UILabel *one;
+@property (strong, nonatomic) IBOutlet UIImageView *bookImg;
 
 @end
 
